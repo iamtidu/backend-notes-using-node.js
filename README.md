@@ -85,40 +85,43 @@ node app.js
 > Hello, World!
 
 
-Working with the console and process Objects
-•	console Object: The console object provides methods for writing to the standard output and standard error streams.
-•	
-	 console.log('This is a log message.');
-	console.error('This is an error message.');
-	console.warn('This is a warning message.');
-
-•	 process Object: The process object provides information and control over the current Node.js process. It can be used to handle command-line arguments, environment variables, and more.
-	console.log('Current directory:', process.cwd());
-	console.log('Node.js version:', process.version);
-	console.log('Environment variables:', process.env);
+### Working with the console and process Objects
+- **onsole Object:** The console object provides methods for writing to the standard output and standard error streams.
+```javascript	
+console.log('This is a log message.');
+console.error('This is an error message.');
+console.warn('This is a warning message.');
+```
+- **process Object:** The process object provides information and control over the current Node.js process. It can be used to handle command-line arguments, environment variables, and more.
+```javascript
+console.log('Current directory:', process.cwd());
+console.log('Node.js version:', process.version);
+console.log('Environment variables:', process.env);
 
 example:
 // Handling command-line arguments
-	process.argv.forEach((val, index) => {
+process.argv.forEach((val, index) => {
  	 console.log(`${index}: ${val}`);
 });
 
 // Exiting the process
-	process.exit(0);
-
-3. Modules and Packages
-Understanding Modules in Node.js
+process.exit(0);
+```
+## 3. Modules and Packages
+### Understanding Modules in Node.js
 In Node.js, a module is a reusable piece of code encapsulated in a file. Each module in Node.js has its own context, so it cannot interfere with other modules. This helps to maintain a clean namespace and promotes modular code.
+
 Modules can be of three types:
 1.	Built-in modules: These are provided by Node.js out of the box (e.g., fs, http, path).
 2.	Third-party modules: These are created by the community and can be installed using npm.
 3.	Custom modules: These are created by the developer.
 
-Built-in Modules
+#### Built-in Modules
 Node.js comes with a set of built-in modules that provide a wide range of functionality.
-1.	File System (fs) Module: The fs module allows you to interact with the file system in a way modeled on standard POSIX functions.
- Example: Reading a file asynchronously.
-	const fs = require('fs');
+1.	**File System (fs) Module:** The fs module allows you to interact with the file system in a way modeled on standard POSIX functions.
+```javascript
+//Example: Reading a file asynchronously.
+const fs = require('fs');
 
 fs.readFile('example.txt', 'utf8', (err, data) => {
   if (err) {
@@ -127,10 +130,12 @@ fs.readFile('example.txt', 'utf8', (err, data) => {
   }
   console.log(data);
 });
-2.	HTTP Module: The http module allows you to create an HTTP server and handle HTTP requests and responses.
-Example: Creating a simple HTTP server.
+```
+2.	**HTTP Module:** The http module allows you to create an HTTP server and handle HTTP requests and responses.
+```javascript
+//Example: Creating a simple HTTP server.
  
-	const http = require('http');
+const http = require('http');
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
@@ -140,20 +145,22 @@ const server = http.createServer((req, res) => {
 server.listen(3000, '127.0.0.1', () => {
   console.log('Server running at http://127.0.0.1:3000/');
 });
+```
+3.	**Path Module:** The path module provides utilities for working with file and directory paths.
 
-3.	Path Module: The path module provides utilities for working with file and directory paths.
-Example: Working with paths.
+```javascript
+//Example: Working with paths.
  
-	const path = require('path');
+const path = require('path');
 const filePath = path.join(__dirname, 'example.txt');
 console.log(filePath);
 console.log(path.basename(filePath));
 console.log(path.extname(filePath));
-
-Creating Custom Modules
+```
+### Creating Custom Modules
 You can create your own modules to encapsulate and reuse code. A module is typically a JavaScript file that exports one or more objects, functions, or variables.
 Example: Creating and using a custom module.
-1.	Creating a custom module: Create a file named math.js with the following code:
+1.	**Creating a custom module:** Create a file named math.js with the following code:
  
 	// math.js
 function add(a, b) {
