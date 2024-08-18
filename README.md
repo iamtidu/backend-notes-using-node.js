@@ -1,6 +1,6 @@
 # 1. Introduction to Node.js
 
-What is `Node.js`?
+## What is `Node.js`?
 
 Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to execute JavaScript code on the server side. It uses the V8 JavaScript engine (the same one used by Google Chrome) to execute code and includes a library of various JavaScript modules to help simplify the development of web applications and other types of software.
 
@@ -13,67 +13,76 @@ To install Node.js, follow these steps:
 2.	Install Node.js:
 -	Run the installer and follow the setup wizard.
 -	After installation, verify it by opening a terminal (Command Prompt, PowerShell, or terminal on Mac/Linux) and typing:
-
 `node -v`
 `npm -v`
 - you should see the version numbers of Node.js and npm (Node Package Manager), indicating a successful installation.
-
-Understanding Node.js Architecture and Event-Driven Programming
+### Understanding Node.js Architecture and Event-Driven Programming
 Node.js is designed to be event-driven and non-blocking, which makes it ideal for building scalable and high-performance applications.
-•	Single-Threaded Event Loop: Node.js operates on a single-threaded event loop architecture, meaning it uses a single thread to handle all incoming requests. The event loop allows Node.js to perform non-blocking I/O operations, handling multiple operations concurrently.
-•	Event-Driven: Node.js uses an event-driven architecture, where events are emitted and handled by callback functions. This approach allows the server to remain responsive and handle high concurrency.
+- Single-Threaded Event Loop: Node.js operates on a single-threaded event loop architecture, meaning it uses a single thread to handle all incoming requests. The event loop allows Node.js to perform non-blocking I/O operations, handling multiple operations concurrently.
+- Event-Driven: Node.js uses an event-driven architecture, where events are emitted and handled by callback functions. This approach allows the server to remain responsive and handle high concurrency.
 
-2. Basic Concepts
+## 2. Basic Concepts
 
-Node.js REPL (Read-Eval-Print Loop)
+### Node.js REPL (Read-Eval-Print Loop)
 The Node.js REPL is an interactive shell that allows you to execute JavaScript code and see the results immediately. It's useful for experimenting and debugging code snippets.
 
 To start the REPL, open your terminal and type:
-	node
+
+ `node`
+
 You can now type JavaScript code and see the output:
-	const message = "Hello, Node.js!";
-	console.log(message);
--	Hello, Node.js!
+``` javascript
+const message = "Hello, Node.js!";
+console.log(message);
+Hello, Node.js!
+```
 
 
-
-Global Objects and Core Modules
+### Global Objects and Core Modules
 Node.js provides several global objects and built-in modules that you can use without requiring them explicitly.
-•	Global Objects:
-o	__dirname: The directory name of the current module.
-o	__filename: The file name of the current module.
-o	module: The current module.
-o	exports: The object that's exposed as a module.
+#### Global Objects:
+- __dirname: The directory name of the current module.
+- __filename: The file name of the current module.
+- module: The current module.
+- exports: The object that's exposed as a module.
+ 
  Example:
-	console.log(__dirname);
-	console.log(__filename);
-	console.log(module);
+``` javascript
+console.log(__dirname);
+console.log(__filename);
+console.log(module);
+```
+#### Core Modules:
+- fs: File system module.
+- http: HTTP module.
+- path: Path module.
+ Example:
 
-•	Core Modules:
-o	fs: File system module.
-o	http: HTTP module.
-o	path: Path module.
- Example:
-	const fs = require('fs');
+``` javascript
+const fs = require('fs');
 const path = require('path');
 const filePath = path.join(__dirname, 'example.txt');
 fs.writeFileSync(filePath, 'Hello, world!');
+```
 
-
-Creating Your First Node.js Application
+### Creating Your First Node.js Application
 Let's create a simple Node.js application that prints "Hello, World!" to the console.
 1.	Create a new directory for your project and navigate into it:
-	mkdir my-node-app
-	cd my-node-app
-
+```javascript
+mkdir my-node-app
+cd my-node-app
+```
 2.	Create a new file named app.js and open it in your favorite text editor. Add the following code:
-	console.log('Hello, World!');
-
+```javascript
+console.log('Hello, World!');
+```
 3.	Save the file and run it using Node.js:
-	node app.js
+```javascript
+node app.js
+```
 
-You should see the output:
-Hello, World!
+> You should see the output:
+> Hello, World!
 
 
 Working with the console and process Objects
