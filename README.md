@@ -1,6 +1,7 @@
 # 1. Introduction to Node.js
 
 What is `Node.js`?
+
 Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to execute JavaScript code on the server side. It uses the V8 JavaScript engine (the same one used by Google Chrome) to execute code and includes a library of various JavaScript modules to help simplify the development of web applications and other types of software.
 
 ## Installation and Setup
