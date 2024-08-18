@@ -628,7 +628,9 @@ When handling requests and responses, you can access various properties and meth
 - ***URL:*** `req.url`
 - ***HTTP Method:*** `req.method`
 - ***Headers:*** `req.headers`
+  
 **Sending Response Data**
+
 - ***Set Status Code:*** `res.statusCode`
 - ***Set Headers:*** `res.setHeader`
 - ***Send Response Body:*** `res.write and res.end`
