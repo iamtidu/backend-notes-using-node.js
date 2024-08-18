@@ -7,7 +7,7 @@ Node.js is an open-source, cross-platform JavaScript runtime environment that al
 ## Installation and Setup
 To install Node.js, follow these steps:
 1.	Download Node.js:
-o	Go to the official Node.js website.
+o	Go to the official [Node.js](https://nodejs.org/en) website. 
 o	Download the latest LTS (Long Term Support) version for your operating system.
 2.	Install Node.js:
 o	Run the installer and follow the setup wizard.
