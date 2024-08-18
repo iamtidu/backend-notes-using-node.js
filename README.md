@@ -7,14 +7,16 @@ Node.js is an open-source, cross-platform JavaScript runtime environment that al
 ## Installation and Setup
 To install Node.js, follow these steps:
 1.	Download Node.js:
-o	Go to the official [Node.js](https://nodejs.org/en) website. 
-o	Download the latest LTS (Long Term Support) version for your operating system.
+- Go to the official [Node.js](https://nodejs.org/en) website.
+- Download the latest LTS (Long Term Support) version for your operating system.
+
 2.	Install Node.js:
-o	Run the installer and follow the setup wizard.
-o	After installation, verify it by opening a terminal (Command Prompt, PowerShell, or terminal on Mac/Linux) and typing:
+-	Run the installer and follow the setup wizard.
+-	After installation, verify it by opening a terminal (Command Prompt, PowerShell, or terminal on Mac/Linux) and typing:
+
 `node -v`
 `npm -v`
-o	You should see the version numbers of Node.js and npm (Node Package Manager), indicating a successful installation.
+- you should see the version numbers of Node.js and npm (Node Package Manager), indicating a successful installation.
 
 Understanding Node.js Architecture and Event-Driven Programming
 Node.js is designed to be event-driven and non-blocking, which makes it ideal for building scalable and high-performance applications.
