@@ -771,3 +771,4 @@ server.listen(port, () => {
 - **Routing and Serving Static Files:** Handle different routes and serve static files using the fs module.
 - **CRUD Operations:** Perform `Create`, `Read`, `Update`, and `Delete` operations on data using ***HTTP methods*** like `GET`, `POST`, `PUT`, and `DELETE`.
   
+!Bingo !
